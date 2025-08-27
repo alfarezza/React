@@ -6,9 +6,22 @@ export default function ModalForm(isOpen, onClose, mode, OnSubmit) {
                 <div className="modal-box">
                     <h3 className="font-bold text-lg py-4">{mode === 'edit' ? 'Edit Client':'Client Details'}</h3>
                     <form method="dialog">
+                        <label className="input input-bordered flex items-center gap-2"> Name
+                            <input type="text" className="grow" placeholder="Daisy">
+                            </input>
+                        </label>
+                        <label className="input input-bordered flex items-center gap-2"> E-Mail
+                            <input type="text" className="grow" placeholder="Daisy">
+                            </input>
+                        </label>
+                        <label className="input input-bordered flex items-center gap-2"> Job
+                            <input type="text" className="grow" placeholder="Daisy">
+                            </input>
+                        </label>
+
                         {/* if there is a button in form, it will close the modal */}
                         <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2" onClick={onClose}>✕</button>
-                        
+
                         <button className="btn btn-success">{mode === 'edit' ? 'Save Changes':'Add Client'}</button>
                     </form>
                 </div>

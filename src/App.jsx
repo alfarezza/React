@@ -6,11 +6,11 @@ import TableList from './components/Tablelist'
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
-  const [modalMode, setmodalMode] = useState('add');
+  const [modalMode, setModalMode] = useState('add');
 
   const handleOpen = () =>{
     setIsOpen(true);
-    setmodalMode(mode);
+    setModalMode(mode);
   }
 
   const handleSubmit = () =>{

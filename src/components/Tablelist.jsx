@@ -1,6 +1,6 @@
 export default function Tablelist() {
     const clients =[
-        {id: 1, name:"John Doe", email:"John.doe@gmail.com", job:"Developer", rate:"150", isactive:true},
+        {id: 1, name:"John Doe", email:"John.doe@gmail.com", job:"Developer", rate:"150", isactive:false},
         {id: 2, name:"Malika", email:"malika@gmail.com", job:"Architecture", rate:"145", isactive:true},
         {id: 3, name:"Filisku", email:"filisku@gmail.com", job:"Gamer", rate:"80", isactive:true},
         {id: 4, name:"Davina", email:"Dav@gmail.com", job:"Chef", rate:"188", isactive:true},
@@ -31,8 +31,18 @@ export default function Tablelist() {
                             <td>{client.job}</td>
                             <td>{client.rate}</td>
                             <td>
-                                <button className="btn btn-primary">
-                                    Active
+                                <button className={`btn rounded-full w-20 ${client.isactive ? `btn-primary`:`btn-outline btn-primary`}`}>
+                                    {client.isactive ? `Active`:`Inactive`}
+                                </button>
+                            </td>
+                            <td>
+                                <button className="btn btn-secondary">
+                                    Update
+                                </button>
+                            </td>
+                            <td>
+                                <button className="btn btn-error">
+                                    Delete
                                 </button>
                             </td>
                         </tr>

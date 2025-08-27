@@ -1,4 +1,4 @@
-export default function Tablelist() {
+export default function TableList() {
     const clients =[
         {id: 1, name:"John Doe", email:"John.doe@gmail.com", job:"Developer", rate:"150", isactive:false},
         {id: 2, name:"Malika", email:"malika@gmail.com", job:"Architecture", rate:"145", isactive:true},
